@@ -41,5 +41,8 @@ This project was built to reinforce core web design concepts including:
 - Clean integration of third-party icon libraries (Font Awesome).
 - Basic JavaScript event handling.
 
+## 🎥 Demo Video
+https://github.com/user-attachments/assets/ecdc9575-7158-45a4-beaa-cc0eab92311d
+
 ---
 *Disclaimer: This is a front-end UI clone made strictly for educational purposes and personal practice. It has no affiliation with Amazon and does not contain backend logic or process transactions.*
