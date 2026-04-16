@@ -1,6 +1,6 @@
-# 🛒 Amazon Clone
+# 🛒 Shop Clone
 
-A front-end clone of the Amazon homepage built to practice modern web development skills. This project replicates the core layout and styling of the famous e-commerce site.
+A front-end clone of the Shopping homepage built to practice modern web development skills. This project replicates the core layout and styling of the famous e-commerce site.
 
 ## 🚀 Features
 
@@ -33,7 +33,7 @@ To view this project locally, there's no server or build process required:
 
 > **Note:** The project was built primarily with desktop displays in mind. Mobile responsiveness may be limited as the main focus was on structural layout and Flexbox practice.
 
-## 📝 Learning Outcomes
+##  Learning Outcomes
 
 This project was built to reinforce core web design concepts including:
 - Utilizing CSS Flexbox for complex, real-world layout structures.
