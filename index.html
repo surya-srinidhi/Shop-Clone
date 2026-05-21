@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amazon Clone - Modern Fullstack Experience</title>
+    <!-- FontAwesome v6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,123 +19,96 @@
             <div class="nav-logo border">
                 <div class="logo"></div>
             </div>
+            
             <div class="nav-address border">
-                <p class="address-first">
-                    Deliver to
-                </p>
+                <p class="address-first">Deliver to</p>
                 <div class="address-icon">
                     <i class="fa-solid fa-location-dot"></i>
                     <p class="address-second">India</p>
                 </div>
             </div>
+            
             <div class="nav-search">
                 <select class="search-select">
                     <option>All</option>
                 </select>
-                <input placeholder="Search Amazon" class="search-input">
-                <div class="search-icon">
-                 <i class="fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Search Amazon" class="search-input" id="search-input">
+                <div class="search-icon" id="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
-        </div>
-        <div class="nav-signin border">
-            <p><span>Hello, sign in</span></p>
-            <p class="nav-second">Account & Lists</p>
-        </div>
+            
+            <div class="nav-signin border" id="nav-signin">
+                <p><span id="user-greeting">Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists <i class="fa-solid fa-caret-down" style="font-size: 10px; margin-left: 2px;"></i></p>
+            </div>
 
-           <div class="nav-return border">
-            <p><span>Returns</span></p>
-            <p class="nav-second">& Orders</p>
-        </div>
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
 
-            <div class="nav-cart border">
-                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="nav-cart border" id="nav-cart">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </div>
                 Cart
             </div>
+        </div>
+
+        <!-- panel -->
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
             </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deals</p>
+                <p class="border">Prime Video</p>
+                <p class="border">Registry</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+            </div>
+            <div class="panel-deals border">
+                Shop deals in Electronics 
+            </div>
+        </div>
+    </header>
 
-            <!-- panel -->
-             <div class="panel">
-                <div class="panel-all border">
-                    <i class="fa-solid fa-bars"></i>
-                    All
+    <!-- Hero Section Slider Carousel -->
+    <div class="hero-slider">
+        <div class="slides" id="slides-container">
+            <div class="slide active" style="background-image: url('hero_image.png');"></div>
+            <div class="slide" style="background-image: linear-gradient(135deg, #090a0f 0%, #171b26 100%);">
+                <div class="slide-content">
+                    <span class="slide-badge">LATEST DEALS</span>
+                    <h1>Stunning Deals of the Season</h1>
+                    <p>Save up to 45% off on Electronics, Clothes, Furniture, and Daily Essentials.</p>
+                    <button class="slide-btn">Shop Current Deals <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-                <div class="panel-ops">
-                        <p class="border">Today's Deals</p>
-                        <p class="border">Prime Video</p>
-                        <p class="border">Registry</p>
-                        <p class="border">Customer Service</p>
-                        <p class="border">Gift Cards</p>
-                        <p class="border">Sell</p>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(135deg, #131921 0%, #2b3b4c 100%);">
+                <div class="slide-content">
+                    <span class="slide-badge">EXCLUSIVES</span>
+                    <h1>Curated Modern Brands</h1>
+                    <p>Transform your space with handpicked interior designs and premium quality goods.</p>
+                    <button class="slide-btn">Explore Collection <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-                <div class="panel-deals border">
-                    Shop deals in Electronics 
-                </div>
-             </div>
-</header>
-
-    <div class="hero-section">
+            </div>
+        </div>
+        <button class="slider-btn prev" id="prev-slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn next" id="next-slide"><i class="fa-solid fa-chevron-right"></i></button>
+        
         <div class="hero-msg">
-            <p>You are on amazon.com. You can also on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in</a></p>
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
         </div>
     </div>
 
-    <div class="shop-section">
-        <div class="box">
-           <div class="box-content">
-                <h2>Health & Personal Care</h2>
-                <div class="box-img" style="background-image: url('box1_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Clothes</h2>
-                <div class="box-img" style="background-image: url('box2_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Furniture</h2>
-                <div class="box-img" style="background-image: url('box3_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Electronics</h2>
-                <div class="box-img" style="background-image: url('box4_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-           <div class="box-content">
-                <h2>Beauty Picks</h2>
-                <div class="box-img" style="background-image: url('box5_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Books</h2>
-                <div class="box-img" style="background-image: url('box6_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Toys</h2>
-                <div class="box-img" style="background-image: url('box7_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
-        <div class="box">
-            <div class="box-content">
-                <h2>Women's Shoes</h2>
-                <div class="box-img" style="background-image: url('box8_image.png');"></div>
-                <p>See more</p>
-           </div>
-        </div>
+    <!-- Shop Section Grid -->
+    <div class="shop-section" id="products-grid">
+        <!-- Products loaded dynamically from MySQL will render here -->
     </div>
 
     <footer>
@@ -157,8 +135,6 @@
                 <a>Advertise your Products</a>
                 <a>Self-Publish with Us</a>
                 <a>Host an Amazon Hub</a>
-                <pre><a>< See More Make Money
-with Us</a></pre>
             </ul>
             <ul>
                 <p>Amazon Payment Products</p>
@@ -175,7 +151,6 @@ with Us</a></pre>
                 <a>Shipping Rates & Policies</a>
                 <a>Returns & Replacements</a>
                 <a>Manage Your Content and Devices</a>
-                <a>Amazon Assistant</a>
                 <a>Help</a>
             </ul>
         </div>
@@ -191,10 +166,78 @@ with Us</a></pre>
                 <a>Your Ads Privacy Choices</a>
             </div>
             <div class="copyright">
-                © 1996-2025, Amazon.com, Inc. or its affiliates
+                © 1996-2026, Amazon.com, Inc. or its affiliates
             </div>
         </div>
     </footer>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Cart (<span id="drawer-cart-count">0</span>)</h3>
+            <button class="close-drawer-btn" id="close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-content" id="cart-drawer-content">
+            <!-- Dynamic cart items will be rendered here -->
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal-price">₹0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Glassmorphic Auth Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-modal-content">
+            <button class="close-auth-btn" id="close-auth-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="tab-login">Login</button>
+                <button class="auth-tab" id="tab-register">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <h2>Welcome Back</h2>
+                <p>Sign in to access your persistent shopping cart and customized experience.</p>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email" required placeholder="suryasrinidhi@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="auth-submit-btn">Sign In</button>
+            </form>
+            
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form">
+                <h2>Create Account</h2>
+                <p>Register today to sync products and personalize your dashboard.</p>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="register-name" required placeholder="Surya Srinidhi">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="register-email" required placeholder="suryasrinidhi@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="register-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="auth-submit-btn">Create Your Amazon Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Alert Container -->
+    <div class="toast-container" id="toast-container"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
